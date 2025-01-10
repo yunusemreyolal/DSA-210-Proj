@@ -1,0 +1,8 @@
+plt.figure(figsize=(24, 20))  # Wide for readability
+sns.heatmap(heatmap_data, annot=True, cmap='coolwarm', fmt=".1f", linewidths=0.5, cbar_kws={'label': 'Value'})
+plt.xticks(fontsize=14, rotation=45, ha="right")
+plt.yticks(fontsize=16)
+plt.title("Heatmap of Genre Count and Average Temperature", fontsize=22)
+plt.tight_layout()
+plt.savefig("heatmap.png")  # Save as an image file
+plt.show()
