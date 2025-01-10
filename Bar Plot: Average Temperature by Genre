@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(16, 10))
+plt.bar(sorted_data['genre'], sorted_data['average_temperature'], color='skyblue')
+plt.xticks(rotation=90, fontsize=12)
+plt.yticks(fontsize=12)
+plt.xlabel("Genre", fontsize=14)
+plt.ylabel("Average Temperature", fontsize=14)
+plt.title("Comparison of Average Temperature by Genre", fontsize=16)
+plt.tight_layout()
+plt.savefig("bar_plot.png")  # Save as an image file
+plt.show()
