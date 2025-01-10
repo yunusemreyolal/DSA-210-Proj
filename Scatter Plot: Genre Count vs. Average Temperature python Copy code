@@ -1,0 +1,11 @@
+plt.figure(figsize=(12, 8))
+plt.scatter(grouped_data['count'], grouped_data['average_temperature'], color='orange')
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.xlabel("Genre Count", fontsize=14)
+plt.ylabel("Average Temperature", fontsize=14)
+plt.title("Genre Count vs. Average Temperature", fontsize=16)
+plt.grid(True)
+plt.tight_layout()
+plt.savefig("scatter_plot.png")  # Save as an image file
+plt.show()
