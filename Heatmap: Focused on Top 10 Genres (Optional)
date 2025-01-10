@@ -1,0 +1,10 @@
+top_10_genres = grouped_data.nlargest(10, 'count')  # Top 10 genres by count
+focused_heatmap_data = grouped_data[grouped_data['genre'].isin(top_10_genres['genre'])].pivot_table(
+    index='genre', values=['count', 'average_temperature'])
+
+plt.figure(figsize=(12, 8))  # Smaller size for top 10
+sns.heatmap(focused_heatmap_data, annot=True, cmap='coolwarm', fmt=".1f", linewidths=0.5)
+plt.title("Heatmap of Top 10 Genres: Count and Average Temperature", fontsize=16)
+plt.tight_layout()
+plt.savefig("focused_heatmap.png")  # Save as an image file
+plt.show()
