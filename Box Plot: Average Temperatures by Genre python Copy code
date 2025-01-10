@@ -1,0 +1,12 @@
+import seaborn as sns
+
+plt.figure(figsize=(24, 20))  # Make it wide for readability
+sns.boxplot(data=grouped_data, x='average_temperature', y='genre', color='lightblue')
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=16)  # Larger font size for genre labels
+plt.xlabel("Average Temperature", fontsize=18)
+plt.ylabel("Genre", fontsize=20)
+plt.title("Distribution of Average Temperatures by Genre", fontsize=22)
+plt.tight_layout()
+plt.savefig("box_plot.png")  # Save as an image file
+plt.show()
